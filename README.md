@@ -1,7 +1,3 @@
-Claro, posso ajudar a criar um README.md para o seu projeto de port scanner. Vou adaptar o modelo que você forneceu para o contexto do seu scanner de portas e as instruções específicas. Aqui está um exemplo de como o seu README.md pode ser estruturado:
-
----
-
 ## Port Scanner
 
 ###### Technologies:
@@ -47,11 +43,11 @@ To run the Port Scanner application, follow the instructions in the Setup sectio
 
 ### Functionality
 
-The Port Scanner tests the availability of specified ports on a given IP address or domain. It determines whether the ports are open, closed, or filtered, and provides a list of open ports.
+The Port Scanner tests the availability of specified ports on a given IP address or domain. It determines whether the ports are open or closed, and provides a list of ports and states.
 
 ### Functions
 
-#### scan_ports Function
+#### get_open_ports Function
 
 This function performs a scan on a list of ports for a given IP address or domain. It checks if each port is open or closed and outputs the results.
 
@@ -67,17 +63,12 @@ This tool is useful for network administrators, security professionals, and anyo
 
 ## How to Use
 
-1. Call the `scan_ports` function to perform a scan on the specified ports.
+1. Call the `get_open_ports` function to perform a scan on the specified ports.
 
 ### Example Usage
 
 ```python
 import port_scanner
-
-# Scan ports for a given IP address
-open_ports = port_scanner.scan_ports("www.stackoverflow.com", [80, 443])
-print(f"Open ports: {open_ports}")
-```
 
 ### Example Output
 
@@ -87,7 +78,7 @@ print(f"Open ports: {open_ports}")
 Testing URL: www.stackoverflow.com
 Hostname: www.stackoverflow.com, IP: 104.18.32.7
 Port 80 is open
-Port 443 is filtered
+Port 443 is closed
 Open ports: [80]
 ```
 
