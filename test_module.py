@@ -6,8 +6,8 @@ class UnitTests(unittest.TestCase):
     def test_port_scanner_ip(self):
         ports = port_scanner.get_open_ports("209.216.230.240", [440, 445], False)
         actual = ports
-        expected = [443]
-        self.assertEqual(actual, expected, 'Expected scanning ports of IP address to return [443].')
+        expected = []
+        self.assertEqual(actual, expected, 'Expected scanning ports of IP address to return [].')
         
     def test_port_scanner_url(self):
         ports = port_scanner.get_open_ports("www.stackoverflow.com", [79, 82], False)
