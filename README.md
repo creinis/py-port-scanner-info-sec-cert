@@ -70,6 +70,11 @@ This tool is useful for network administrators, security professionals, and anyo
 ```python
 import port_scanner
 
+# Scan ports for a given IP address
+open_ports = port_scanner.scan_ports("www.stackoverflow.com", [80, 443])
+print(f"Open ports: {open_ports}")
+```
+
 ### Example Output
 
 **Scan Results:**
